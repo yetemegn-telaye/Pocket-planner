@@ -1,0 +1,2 @@
+class BudgetLog < ApplicationRecord
+end
