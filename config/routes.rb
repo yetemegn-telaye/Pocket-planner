@@ -8,4 +8,6 @@ Rails.application.routes.draw do
     get '/users/sign_out', to: 'devise/sessions#destroy'
     root to: 'devise/sessions#new'
   end
+
+  resources :categories, only: [:index, :show, :new, :create]
 end
