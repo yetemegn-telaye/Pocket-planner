@@ -1,7 +1,9 @@
 class Category < ApplicationRecord
   belongs_to :user
-  has_many :category_budget_logs, dependent: :destroy
-  has_many :budget_logs, through: :category_budget_logs
   validates :name, presence: true
   validates :icon, presence: true
+
+  def total_spent
+    budget_logs.sum(:amount)
+  end
 end
