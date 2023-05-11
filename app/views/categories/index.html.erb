@@ -4,7 +4,9 @@
     <ul>
         <% @categories.each do |category| %>
         <li>
-            <%= link_to category.name, category_path(category) %>
+            <%= link_to category.name, category_budget_logs_path(category) %>
+            <%= category.icon %>
+            Total spent: <%= category.total_spent %>
         </li>
         <% end %>
     </ul>

@@ -1,9 +1,9 @@
 class CategoriesController < ApplicationController
-  before_action :set_category, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
+
   def index
-    @categories = current_user.categories.all
-    @user = current_user
+    @categories = current_user.categories.includes(:budget_logs)
+    @distinct_logs = current_user.budget_logs.
   end
   
   def show
@@ -29,9 +29,6 @@ class CategoriesController < ApplicationController
 
   private
 
-  def set_category
-    @category = Category.find(params[:id])
-  end
   def post_params
     params.require(:category).permit(:name, :icon)
   end
