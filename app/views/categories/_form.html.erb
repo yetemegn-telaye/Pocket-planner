@@ -1,4 +1,5 @@
 <%= form_with model: category, local: true do |f| %>
+    <div>
 <div>
     <%= f.label :name %>
     <%= f.text_field :name %>
@@ -8,5 +9,6 @@
     <%= f.label :icon %>
     <%= f.text_field :icon %>
 </div>
-<%= f.submit "Create New Category" %>
+<%= f.submit "Save" %>
+</div>
 <% end %>

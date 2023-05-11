@@ -8,7 +8,7 @@ class CategoriesController < ApplicationController
   
   def show
     @category = current_user.categories.includes(:budget_logs).find(params[:id])
-    @budget_logs = @category.budget_logs.sort {|a,b| a.created_at <=> b.created_at}
+    @budget_logs = @category.budget_logs.order(created_at: :desc)
     @total = @budget_logs.map(&:amount).sum
   end
 

@@ -1,5 +1,7 @@
 <div>
-    <h3> Spendings: <%= @total %></h3>
+<%= link_to "<< Back", categories_path %>
+    <h2>Most Recent</h2>
+    <h3> Total Spendings: <%= @total %></h3>
     <div>
         <% if @budget_logs.empty? %>
         <div>
@@ -14,7 +16,7 @@
         <% end %>
 
         <div>
-            <%= link_to "New Spending", new_category_budget_log_path(@category) %>
+            <%= link_to "Add New Transaction", new_category_budget_log_path(@category) %>
         </div>
     </div>
 </div>
