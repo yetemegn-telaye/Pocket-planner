@@ -1,17 +1,18 @@
 <h1>Categories</h1>
 <%= link_to "Log Out", logout_path %>
-<% if @categories.any? %>
-    <ul>
-        <% @categories.each do |category| %>
-        <li>
-            <%= link_to category.name, category_budget_logs_path(category) %>
-            <%= category.icon %>
-            Total spent: <%= category.total_spent %>
-        </li>
-        <% end %>
-    </ul>
+<div>
+<% if @categories.empty? %>
+    <div>
+        <p>There are no categories yet!</p>
+    </div>
     <% else %>
-    <p>There are no categories yet!</p>
+        <div>
+            <% @categories.each do |category| %>
+                <%= render 'category_card', category: category %>
+            <% end %>
+        </div>
     <% end %>
-    <%= link_to "New Category", new_category_path %>
-   
+    <div>
+        <%= link_to "New Category", new_category_path %>
+    </div>
+</div>
