@@ -1,0 +1,9 @@
+<h1>New Log</h1>
+<div>
+    <% if flash[:alert].present? %>
+        <p><%= flash[:alert] %></p>
+    <% end %>
+    <div>
+        <%= render 'form', category: @category,  budget_log: @budget_log%>
+    </div>
+</div>

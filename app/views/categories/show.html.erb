@@ -1,0 +1,22 @@
+<div>
+<%= link_to "<< Back", categories_path %>
+    <h2>Most Recent</h2>
+    <h3> Total Spendings: <%= @total %></h3>
+    <div>
+        <% if @budget_logs.empty? %>
+        <div>
+        <p>There are no budget logs yet!</p>  
+        </div>      
+        <% else %>
+          <div>
+            <% @budget_logs.each do |budget_log| %>
+                <%= render 'budget_log_card', budget_log: budget_log %>
+            <% end %>
+          </div>
+        <% end %>
+
+        <div>
+            <%= link_to "Add New Transaction", new_category_budget_log_path(@category) %>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<h1>Categories</h1>
+<%= link_to "Log Out", logout_path %>
+<div>
+<% if @categories.empty? %>
+    <div>
+        <p>There are no categories yet!</p>
+    </div>
+    <% else %>
+        <div>
+            <% @categories.each do |category| %>
+                <%= render 'category_card', category: category %>
+            <% end %>
+        </div>
+    <% end %>
+    <div>
+        <%= link_to "New Category", new_category_path %>
+    </div>
+</div>

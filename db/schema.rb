@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_09_162012) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_11_095356) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -23,6 +23,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_09_162012) do
     t.index ["user_id"], name: "index_budget_logs_on_user_id"
   end
 
+  create_table "budget_logs_categories", id: false, force: :cascade do |t|
+    t.bigint "category_id", null: false
+    t.bigint "budget_log_id", null: false
+  end
+
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.string "icon"
@@ -30,15 +35,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_09_162012) do
     t.datetime "updated_at", null: false
     t.bigint "user_id", null: false
     t.index ["user_id"], name: "index_categories_on_user_id"
-  end
-
-  create_table "category_budget_logs", force: :cascade do |t|
-    t.bigint "category_id", null: false
-    t.bigint "budget_log_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["budget_log_id"], name: "index_category_budget_logs_on_budget_log_id"
-    t.index ["category_id"], name: "index_category_budget_logs_on_category_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -60,6 +56,4 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_09_162012) do
 
   add_foreign_key "budget_logs", "users"
   add_foreign_key "categories", "users"
-  add_foreign_key "category_budget_logs", "budget_logs"
-  add_foreign_key "category_budget_logs", "categories"
 end

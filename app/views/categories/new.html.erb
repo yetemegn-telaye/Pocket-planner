@@ -1,0 +1,11 @@
+<h1>New Category</h1>
+<%= link_to "<< Back", categories_path %>
+<div>
+    <div>
+<%= render 'form', category: @category, user:@user %>
+
+<% if flash[:error] %>
+    <%= flash[:error] %>
+<% end %>
+    </div>
+</div>
