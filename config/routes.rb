@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   end
 
   resources :categories, only: [:index, :new, :create, :edit, :update, :show, :destroy] do 
-    resources :budget_logs, only: [:index, :new, :create, :edit, :update, :show, :destroy]
+    resources :budget_logs, only: [:new, :create, :edit, :update, :destroy]
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -19,5 +19,5 @@ Rails.application.routes.draw do
   devise_scope :user do
     get '/logout', to: 'devise/sessions#destroy'
   end
-  root to: 'home#index'
+  
 end
