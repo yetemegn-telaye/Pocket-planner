@@ -1,7 +1,9 @@
-<div>
-    <h1>Pocket Planner</h1>
-    <div>
-        <%= button_to "Login", new_user_session_path %>
+<section class="container">
+<div class="splash-container">
+    <h1 class="app-title">Pocket Planner</h1>
+    <div class="splash-btns">
+        <%= button_to "Login", new_user_session_path, class: "button-primary" %>
         <%= link_to "Sign Up", new_user_registration_path %>
     </div>
 </div>
+</section>
