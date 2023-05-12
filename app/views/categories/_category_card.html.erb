@@ -1,8 +1,13 @@
-<ul> 
-        <li>
-            <%= link_to category.name, category_path(category) %>
-            <%= category.icon %>
-            TOTAL SPENT: <%= category.total_spent %>
-        </li>
-
-    </ul>
+<div class="category-card"> 
+        <%= category.icon %>
+        <div class="cat-det">
+        <div class="cat-name">
+            <h5><%= link_to category.name, category_path(category) %></h5>
+            <%= category.total_spent %>
+        </div>
+        <hr/>
+        <small><%= category.created_at.strftime("%B %d, %Y") %></small>
+ 
+    </div>
+            
+</div>
