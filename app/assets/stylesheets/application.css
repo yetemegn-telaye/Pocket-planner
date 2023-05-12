@@ -13,13 +13,15 @@
  *= require_tree .
  *= require_self
  */
- @import "font-awesome";
+ @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
  :root {
     --primary-color: #3778c2;
     --secondary-color: #5fb523;
     --dark-color: #434b54;
+    --lighter-color: #6f7984;
     --light-color: #f4f4f4;
+    --danger-color: rgb(183, 15, 15);
  }
 
  * {
@@ -32,6 +34,7 @@
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 1.5;
+    color: var(--dark-color);
  }
 
  .container {
@@ -45,8 +48,7 @@
 
  a {
     text-decoration: none;
-    color: inherit;
-    color: var(--dark-color)
+    color: var(--lighter-color);
  }
  a:hover {
     text-decoration: none;
@@ -69,4 +71,35 @@
  .header {
     padding: 1rem;
     text-align: center;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--light-color);
+ }
+ .header-title {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding-top: 1rem;
+ }
+.header-title small{
+   padding-top: 0.8rem;
+}
+ hr {
+    width: 100%;
+    color: var(--lighter-color);
+ }
+ .action-div{
+    width: 100%;
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 1rem;
+ }
+ .action-div a {
+    border: 1px solid white;
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    padding: 0.5rem 3rem;
  }
