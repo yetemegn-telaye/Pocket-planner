@@ -6,8 +6,9 @@ Rails.application.routes.draw do
   end
 
   unauthenticated do
-    root 'home#index', as: :unauthenticated_root
+    root 'splash#index', as: :unauthenticated_root
   end
+
 
   resources :categories, only: [:index, :new, :create, :edit, :update, :show, :destroy] do 
     resources :budget_logs, only: [:new, :create, :edit, :update, :destroy]
@@ -15,7 +16,7 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-  # root "articles#index"
+  
   devise_scope :user do
     get '/logout', to: 'devise/sessions#destroy'
   end

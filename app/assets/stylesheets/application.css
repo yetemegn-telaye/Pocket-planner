@@ -13,3 +13,60 @@
  *= require_tree .
  *= require_self
  */
+ @import "font-awesome";
+
+ :root {
+    --primary-color: #3778c2;
+    --secondary-color: #5fb523;
+    --dark-color: #434b54;
+    --light-color: #f4f4f4;
+ }
+
+ * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+ }
+
+ body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+ }
+
+ .container {
+    min-height: 100vh;
+    background-color: var(--light-color);
+ }
+
+ h1, h2 {
+    font-family: 'Quicksand', sans-serif;
+ }
+
+ a {
+    text-decoration: none;
+    color: inherit;
+    color: var(--dark-color)
+ }
+ a:hover {
+    text-decoration: none;
+    color: var(--primary-color);
+ }
+
+ button {
+    border: none;
+    cursor: pointer;
+ }
+ .button-primary {
+    color: white;
+    background-color: var(--primary-color);
+    font-size: large;
+ }
+ .button-primary:hover {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+ }
+ .header {
+    padding: 1rem;
+    text-align: center;
+ }
