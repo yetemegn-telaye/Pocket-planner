@@ -1,9 +1,15 @@
-<h1>New Log</h1>
-<div>
+<div class="header">
+    <i class="fa fa-bars"></i>
+    <h4>Add Transaction</h4>
+    <a href="/logout" data-method="delete">
+    <i class="fa-solid fa-right-from-bracket"></i>
+    </a>
+</div>
+<section class="container">
     <% if flash[:alert].present? %>
         <p><%= flash[:alert] %></p>
     <% end %>
     <div>
         <%= render 'form', category: @category,  budget_log: @budget_log%>
     </div>
-</div>
+</section>

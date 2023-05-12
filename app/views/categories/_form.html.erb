@@ -1,14 +1,15 @@
 <%= form_with model: category, local: true do |f| %>
-    <div>
-<div>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-</div>
+<div class="form-card">
+    <div class="form-field">
+        <%= f.text_field :name, placeholder: "Category Name" %>
+    </div>
 
-<div>
-    <%= f.label :icon %>
-    <%= f.text_field :icon %>
-</div>
-<%= f.submit "Save" %>
+    <div class="form-field">
+        <%= f.text_field :icon, placeholder: "Category icon" %>
+    </div>
+    <div class="action-form">
+        <%= f.submit "Save" %>
+        <%= link_to 'Cancel', categories_path %>
+    </div>
 </div>
 <% end %>
