@@ -10,6 +10,10 @@
 .form-field {
     width: 80%;
 }
+.icon-drop {
+    padding: 0.5rem;
+    
+}
 
 .form-field input {
     padding: 0.9rem;

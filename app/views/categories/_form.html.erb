@@ -4,8 +4,25 @@
         <%= f.text_field :name, placeholder: "Category Name" %>
     </div>
 
+    <% options = [ ["🏠 Housing", "🏠"],
+    ["🏥 Health", "🏥"],
+        ["🐶 Pet expenses", "🐶"],
+        ["📚 Book", "📚"],
+        ["💻 Electronics", "💻"],
+        ["🎁 Gift", "🎁"],
+        ["🍔 Food and dining", "🍔"],
+    ["🛒 Groceries", "🛒"],
+    ["🚗 Tranportation", "🚗"],
+    ["🎬 Entertainment", "🎬"],
+    ["👔 Clothing", "👔"],
+    ["🎓 Education", "🎓"],
+    ["🧾 Others", "🧾"],
+  ] %>
+
+
+
     <div class="form-field">
-        <%= f.text_field :icon, placeholder: "Category icon" %>
+    <%= f.select :icon, options_for_select(options, selected: category.icon), {prompt: "Select an icon" } ,{class:"icon-drop"}%>
     </div>
     <div class="action-form">
         <%= f.submit "Save" %>
