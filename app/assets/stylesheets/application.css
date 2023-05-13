@@ -103,8 +103,8 @@ hr {
   color: var(--lighter-color);
 }
 
-.delete-link{
-   color: var(--danger-color);
+.delete-link {
+  color: var(--danger-color);
 }
 
 .action-div {
