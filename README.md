@@ -59,26 +59,11 @@ After you're finished please remove all the comments and instructions!
 
 ### Tech Stack <a name="tech-stack"></a>
 
-<details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
-  </ul>
-</details>
-
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">Postgres</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-  </ul>
-</details>
+Front-end 🎨: HTML, CSS
+Back-end 💻: Ruby on Rails, PostgreSQL
+Authentication 🔐: Devise gem
+Deployment 🚀: Render
+Testing 🧪: Rspec, Capybara
 
 <!-- Features -->
 
