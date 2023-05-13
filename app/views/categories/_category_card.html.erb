@@ -1,0 +1,14 @@
+<div class="category-card"> 
+        <%= category.icon %>
+        <div class="cat-det">
+        <div class="cat-name">
+            <h4><%= link_to category.name, category_path(category) %></h4>
+             $<%= category.total_spent %>
+        </div>
+        <hr/>
+        <small class="cat-date"><%= category.created_at.strftime("%B %d, %Y") %>
+        </small>
+      
+    </div>
+            
+</div>

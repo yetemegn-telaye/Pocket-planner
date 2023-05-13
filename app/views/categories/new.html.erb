@@ -1,0 +1,15 @@
+<div class="header">
+<%= link_to "< Back" , categories_path , class: "back-link" %>
+    <h4>Add Categories</h4>
+    <a href="/logout" data-method="delete">
+    <i class="fa-solid fa-right-from-bracket"></i>
+    </a>
+</div>
+
+<section class="container">
+    <%= render 'form', category: @category, user:@user %>
+
+<% if flash[:error] %>
+    <%= flash[:error] %>
+<% end %>
+</section>

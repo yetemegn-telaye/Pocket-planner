@@ -1,0 +1,32 @@
+<%= form_with model: category, local: true do |f| %>
+<div class="form-card">
+    <div class="form-field">
+        <%= f.text_field :name, placeholder: "Category Name" %>
+    </div>
+
+    <% options = [ ["🏠 Housing", "🏠"],
+    ["🏥 Health", "🏥"],
+        ["🐶 Pet expenses", "🐶"],
+        ["📚 Book", "📚"],
+        ["💻 Electronics", "💻"],
+        ["🎁 Gift", "🎁"],
+        ["🍔 Food and dining", "🍔"],
+    ["🛒 Groceries", "🛒"],
+    ["🚗 Tranportation", "🚗"],
+    ["🎬 Entertainment", "🎬"],
+    ["👔 Clothing", "👔"],
+    ["🎓 Education", "🎓"],
+    ["🧾 Others", "🧾"],
+  ] %>
+
+
+
+    <div class="form-field">
+    <%= f.select :icon, options_for_select(options, selected: category.icon), {prompt: "Select an icon" } ,{class:"icon-drop"}%>
+    </div>
+    <div class="action-form">
+        <%= f.submit "Save" %>
+        <%= link_to 'Cancel', categories_path %>
+    </div>
+</div>
+<% end %>

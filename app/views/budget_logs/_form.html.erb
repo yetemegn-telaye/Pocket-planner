@@ -1,0 +1,27 @@
+<%= form_with model: [category, budget_log], url: category_budget_logs_path do |f| %>
+    <div class="form-card">
+    <div class="form-field">
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+    </div>
+    
+    <div class="form-field">
+        <%= f.label :amount %>
+        <%= f.number_field :amount %>
+    </div>
+    <div class="check-boxes">
+        <%= f.label :category_ids, "Categories: " %>
+        <%= f.collection_check_boxes :category_ids, @categories, :id, :name do |box|%>
+            <div class="boxes">
+                <%= box.check_box %>
+                <%= box.label %>
+            </div>
+        
+        <% end %>
+    </div>
+    <div class="action-form">
+    <%= f.submit "Save" %>
+    <%= link_to 'Cancel', category_path(@category) %>
+    </div>
+    </div>
+    <% end %>

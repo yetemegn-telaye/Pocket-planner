@@ -1,0 +1,26 @@
+<div class="header">
+    <i class="fa fa-bars"></i>
+    <h4>Categories</h4>
+    <a href="/logout" data-method="delete">
+    <i class="fa-solid fa-right-from-bracket"></i>
+    </a>
+</div>
+
+<section class="container">
+<div class="categories-container">
+<% if @categories.empty? %>
+    <div>
+        <p>There are no categories yet!</p>
+    </div>
+    <% else %>
+        <div class="cat-cards">
+            <% @categories.each do |category| %>
+                <%= render 'category_card', category: category %>
+            <% end %>
+        </div>
+    <% end %>
+    <div class="action-div">
+        <%= link_to "New Category", new_category_path %>
+    </div>
+    </div>
+</section>
