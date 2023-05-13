@@ -33,13 +33,13 @@ After you're finished please remove all the comments and instructions!
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+    -[Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
-  - [Deployment](#deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -77,6 +77,9 @@ Testing 🧪: Rspec, Capybara
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Live Demo <a name="live-demo"></a>
+
+  [Poceket Planner Live Demo](https://pocket-planner.onrender.com)
 
 <!-- GETTING STARTED -->
 
@@ -125,8 +128,6 @@ To run tests, run the following command:
   rspec spec/models/category_spec.rb
   rspec spec/models/budget_log_spec.rb
 ```
-
-### Deployment
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
