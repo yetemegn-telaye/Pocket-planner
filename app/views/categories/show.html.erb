@@ -1,22 +1,35 @@
-<div>
-<%= link_to "<< Back", categories_path %>
-    <h2>Most Recent</h2>
-    <h3> Total Spendings: <%= @total %></h3>
-    <div>
+<div class="header">
+    <%= link_to "< Back" , categories_path , class: "back-link" %>
+    <div class="header-title">
+    <h4>Transactions</h4>
+    <small class="recent-p">Most Recent</small>
+    </div>
+    <a href="/logout" data-method="delete">
+    <i class="fa-solid fa-right-from-bracket"></i>
+    </a>
+</div>
+<section class="container">
+  <div class="total-spend">
+    <p>Total spending:</p>
+    <p>$<%= @total %> </p>
+   
+  </div>
+    <hr/>
+  <div class="categories-container">
         <% if @budget_logs.empty? %>
         <div>
         <p>There are no budget logs yet!</p>  
         </div>      
         <% else %>
-          <div>
+          <div class="cat-cards">
             <% @budget_logs.each do |budget_log| %>
                 <%= render 'budget_log_card', budget_log: budget_log %>
             <% end %>
           </div>
         <% end %>
 
-        <div>
+        <div class="action-div">
             <%= link_to "Add New Transaction", new_category_budget_log_path(@category) %>
         </div>
     </div>
-</div>
+</section>

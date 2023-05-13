@@ -1,0 +1,62 @@
+.form-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 3rem 0;
+  gap: 2rem;
+}
+
+.form-field {
+  width: 80%;
+}
+
+.icon-drop {
+  padding: 0.5rem;
+}
+
+.form-field input {
+  padding: 0.9rem;
+  width: 100%;
+  text-align: center;
+  border-radius: 15px;
+  border: none;
+}
+
+.action-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+}
+
+.action-form input {
+  width: 40%;
+  padding: 0.7rem;
+  border-radius: 10px;
+  background-color: var(--secondary-color);
+  border: none;
+  color: white;
+}
+
+.action-form a {
+  width: 40%;
+  border: 1px solid var(--danger-color);
+  padding: 0.4rem;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.check-boxes {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  gap: 0.5rem;
+}
+
+.boxes {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
