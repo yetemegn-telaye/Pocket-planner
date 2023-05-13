@@ -1,6 +1,6 @@
-.total-spend{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
+.total-spend {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
 }

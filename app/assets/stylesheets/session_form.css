@@ -1,40 +1,45 @@
 .session-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 1rem;
 }
+
 .session-div {
-   display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
+
 .session-div .field {
-    width: 100%;
-    display: flex;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
+
 .remember-box {
-    width: 50%;
+  width: 50%;
 }
+
 .session-div input {
-    padding: 0.75rem;
-    width: 100%;
-    border: none;
-    border-radius: 5rem;
+  padding: 0.75rem;
+  width: 100%;
+  border: none;
+  border-radius: 5rem;
 }
 
 .session-div input:focus {
-    outline: var(--primary-color);
+  outline: var(--primary-color);
 }
 
 .session-div .actions {
-    width: 100%;
+  width: 100%;
 }
+
 .min-pass {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
