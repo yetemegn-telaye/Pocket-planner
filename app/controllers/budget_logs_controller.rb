@@ -24,6 +24,14 @@ class BudgetLogsController < ApplicationController
     end
   end
 
+  def destroy
+    @category = Category.find(params[:category_id])
+    @budget_log = BudgetLog.find(params[:id])
+    @budget_log.destroy
+    flash.now[:success] = 'Transaction deleted successfully!'
+    redirect_to category_path(@category)
+  end
+
   private
 
   def budget_params

@@ -103,6 +103,10 @@ hr {
   color: var(--lighter-color);
 }
 
+.delete-link {
+  color: var(--danger-color);
+}
+
 .action-div {
   width: 100%;
   background-color: var(--secondary-color);
