@@ -23,7 +23,7 @@
         <% else %>
           <div class="cat-cards">
             <% @budget_logs.each do |budget_log| %>
-                <%= render 'budget_log_card', budget_log: budget_log %>
+                <%= render 'budget_log_card', budget_log: budget_log, category: @category %>
             <% end %>
           </div>
         <% end %>

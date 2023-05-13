@@ -1,4 +1,7 @@
-<div class="category-card">
-    <p><%= budget_log.name %></p>
+<div class="budget-card">
+    <h4><%= budget_log.name %></h4>
+    <div class="budget-det">
     <p>Amount: $<%= budget_log.amount %></p>
+    <%= button_to  "Remove", category_budget_log_path(category, budget_log), method: :delete, class: 'delete-link' %>
+    </div>
 </div>

@@ -2,12 +2,13 @@
         <%= category.icon %>
         <div class="cat-det">
         <div class="cat-name">
-            <h5><%= link_to category.name, category_path(category) %></h5>
-            <%= category.total_spent %>
+            <h4><%= link_to category.name, category_path(category) %></h4>
+             $<%= category.total_spent %>
         </div>
         <hr/>
-        <small><%= category.created_at.strftime("%B %d, %Y") %></small>
- 
+        <small class="cat-date"><%= category.created_at.strftime("%B %d, %Y") %>
+        </small>
+      
     </div>
             
 </div>

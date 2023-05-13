@@ -39,3 +39,8 @@
   margin-bottom: 1rem;
   align-items: center;
 }
+.cat-date {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
