@@ -35,6 +35,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: var(--dark-color);
+  background-color: var(--light-color);
 }
 
 .container {
@@ -108,11 +109,13 @@ hr {
 }
 
 .action-div {
-  width: 100%;
+  width: 50%;
   background-color: var(--secondary-color);
   color: var(--light-color);
   text-align: center;
   padding: 1rem;
+  margin: 0 auto;
+  margin-top: 1rem;
 }
 
 .action-div a {
